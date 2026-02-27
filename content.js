@@ -19,7 +19,7 @@ function injectLetter() {
         const calories = parseInt(caloriesMatch[1]);
         const ratio = (calories / price / 100).toFixed(2);
         const ratioElement = document.createElement("span");
-        ratioElement.textContent = ` (Preis/Kalorien: ${ratio} kcal/ct)`;
+        ratioElement.textContent = ` (Kalorien/Preis: ${ratio} kcal/ct)`;
         ratioElement.style.fontWeight = "bold";
         ratioElement.style.color = setColor(ratio);
         item.appendChild(ratioElement);
