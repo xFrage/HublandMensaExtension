@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Hubland Mensa Extension", 
+  "version": "1.0",
+  "description": "automatically calculates price to calories ratio",
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.swerk-wue.de/wuerzburg/essen-trinken/mensen-speiseplaene/mensa-campus-hubland-sued*"],
+      "js": ["content.js"], 
+      "run_at": "document_idle"
+    }
+  ],
+
+  "permissions": [
+    "storage", 
+    "activeTab",
+    "scripting"
+  ], 
+
+  "host_permissions": [
+    "https://www.swerk-wue.de/wuerzburg/essen-trinken/mensen-speiseplaene/mensa-campus-hubland-sued/*"
+  ], 
+
+  "icons": {
+    "16": "icons/icon_16.png",
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  }
+}
