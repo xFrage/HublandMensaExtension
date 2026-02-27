@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Hubland Mensa Extension", 
   "version": "1.0",
-  "description": "automatically calculates price to calories ratio",
+  "description": "automatically calculates calories to price ratio",
 
   "background": {
     "service_worker": "background.js"
