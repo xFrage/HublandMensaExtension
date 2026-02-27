@@ -1,4 +1,4 @@
-function injectLetter() {
+function injectRatio() {
     const headings = [...document.querySelectorAll("h1, h2, h3, h4, h5, h6")];
     const gerichteHeading = headings.find(heading => heading.textContent.trim().toLowerCase().includes("gerichte"));
 
@@ -19,7 +19,7 @@ function injectLetter() {
         const calories = parseInt(caloriesMatch[1]);
         const ratio = (calories / price / 100).toFixed(2);
         const ratioElement = document.createElement("span");
-        ratioElement.textContent = ` (Kalorien/Preis: ${ratio} kcal/ct)`;
+        ratioElement.textContent = ` Kalorien/Preis: ${ratio} kcal/ct`;
         ratioElement.style.fontWeight = "bold";
         ratioElement.style.color = setColor(ratio);
         item.appendChild(ratioElement);
@@ -39,7 +39,7 @@ function setColor(ratio) {
     }
 }
 
-injectLetter();
+injectRatio();
 
 const observer = new MutationObserver(injectLetter);
 observer.observe(document.body, { 

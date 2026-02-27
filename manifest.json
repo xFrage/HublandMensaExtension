@@ -10,7 +10,7 @@
 
   "content_scripts": [
     {
-      "matches": ["https://www.swerk-wue.de/wuerzburg/essen-trinken/mensen-speiseplaene/mensa-campus-hubland-sued*"],
+      "matches": ["https://www.swerk-wue.de/wuerzburg/essen-trinken/mensen-speiseplaene/mensa-campus-hubland-sued/*"],
       "js": ["content.js"], 
       "run_at": "document_idle"
     }
